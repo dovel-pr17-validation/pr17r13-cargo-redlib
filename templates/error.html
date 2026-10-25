@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Error: {{ msg }}{% endblock %}
+{% block sortstyle %}{% endblock %}
+{% block content %}
+<div id="error">
+	<h1>{{ msg }}</h1>
+	<h3><a href="https://www.redditstatus.com/">Reddit Status</a></h3>
+	<br />
+	<h3 id="update-status"></h3>
+	<br />
+	<h3 id="update-status"><a id="random-instance"></a></h3>
+	<br>
+	<div id="git_commit" data-value="{{ crate::instance_info::INSTANCE_INFO.git_commit }}"></div>
+	<script src="/check_update.js"></script>
+
+	<br />
+	<h3>Head back <a href="/">home</a>?</h3>
+</div>
+{% endblock %}
